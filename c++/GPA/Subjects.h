@@ -49,4 +49,34 @@ void Subject::showGrade()
     cout<<"Subject grade: "<<grade<<endl;
 }
 
+int grade_caculate(string grade)
+{
+    //成績を計算する
+    if(grade=="S"||"s")
+    {
+        return 5;
+    }
+    else if(grade=="A"||"a")
+    {
+        return 4;
+    }
+    else if(grade=="B"||"b")
+    {
+        return 3;
+    }
+    else if(grade=="C"||"c")
+    {
+        return 2;
+    }
+    else if(grade=="D"||"d")
+    {
+        return 1;
+    }
+    else
+    {
+        return -1;
+    }
+}
+
+
 #endif // SUBJECT_H
