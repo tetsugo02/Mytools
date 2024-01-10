@@ -52,23 +52,23 @@ void Subject::showGrade()
 int grade_caculate(string grade)
 {
     //成績を計算する
-    if(grade=="S"||"s")
+    if(grade=="S")
     {
         return 5;
     }
-    else if(grade=="A"||"a")
+    else if(grade=="A")
     {
         return 4;
     }
-    else if(grade=="B"||"b")
+    else if(grade=="B")
     {
         return 3;
     }
-    else if(grade=="C"||"c")
+    else if(grade=="C")
     {
         return 2;
     }
-    else if(grade=="D"||"d")
+    else if(grade=="D")
     {
         return 1;
     }
