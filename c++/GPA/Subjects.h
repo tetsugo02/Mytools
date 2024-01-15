@@ -48,7 +48,17 @@ void Subject::showGrade()
     cout<<"Subject teacher: "<<teacher<<endl;
     cout<<"Subject grade: "<<grade<<endl;
 }
+//継承を使って、GPAに影響しない授業を作る
+class noCountSubject:public Subject{
+    public:
+        noCountSubject();
+        noCountSubject(string name,string teacher ,string grade);
+};
 
+noCountSubject::noCountSubject()
+{
+    cout<<"no-count_Subject created"<<endl;
+}
 int grade_caculate(string grade)
 {
     //成績を計算する
