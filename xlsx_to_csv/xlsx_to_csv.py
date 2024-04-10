@@ -22,6 +22,7 @@ file_dir = os.path.dirname(excel_path)
 output_dir = file_dir + "/" + file_name
 pathlib.Path(output_dir).mkdir(parents=True, exist_ok=True)
 # Read excel file using pandas
+# sheet_number が 存在すれば、それのsheetのみ書き出す、そうでなければ全部のsheetをcsv変換する
 if sheet_number:
     data = pd.read_excel(excel_path, sheet_name=sheet_number, index_col=None)
     # Write data to CSV file in the same directory as the input Excel file
