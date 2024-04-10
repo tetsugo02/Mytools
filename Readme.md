@@ -14,4 +14,4 @@ If you do not specify the sheet name, the script will convert all sheets to csv 
 ```bash
 python3 xlsx_to_csv.py code/test.xlsx Sheet1
 ```
-the above command will creat a csv file named Sheet1.csv in the directory as ``code/test/test_Sheet1.csv``.
+the above command will creat a csv file in the directory as ``code/test/test_Sheet1.csv``.
