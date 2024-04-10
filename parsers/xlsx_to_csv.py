@@ -3,9 +3,11 @@ import argparse
 import os
 
 # Create parser and define arguments
-parser = argparse.ArgumentParser(description="This script transfers an Excel (.xlsx) to CSV")
-parser.add_argument('path_to_excel')
-parser.add_argument('--sheet_number', default='Sheet1')
+parser = argparse.ArgumentParser(
+    description="This script transfers an Excel (.xlsx) to CSV"
+)
+parser.add_argument("path_to_excel")
+parser.add_argument("--sheet_number", default="Sheet1")
 
 # Parse provided arguments
 args = parser.parse_args()
@@ -21,4 +23,9 @@ output_dir = os.path.dirname(excel_path)
 data = pd.read_excel(excel_path, sheet_name=sheet_number, index_col=None)
 
 # Write data to CSV file in the same directory as the input Excel file
-data.to_csv(os.path.join(output_dir, file_name+'.csv'), index=False,header=False, encoding='utf-8')
+data.to_csv(
+    os.path.join(output_dir, file_name + ".csv"),
+    index=False,
+    header=False,
+    encoding="utf-8",
+)
